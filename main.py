@@ -18,5 +18,5 @@ if what == "*" :
 	print ("Результат:" + str(c) )	
 elif c < 100 :
 	print("Маленькое число")
-elif c > 100
+elif c > 100 :
 	print ("Большое число")
