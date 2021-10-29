@@ -17,6 +17,23 @@ while i < 10:
     if i == number :
         break
 print("Completed, have a nice day!")
+print ("Let's test your programming knowledge.")
+print ("Why do we use methods?")
+a = print("1. To repeat a statement multiple times.")
+b = print("2. To decompose a program into several smallsubroutimes.")
+c =  print("3. To deternine the execution of a program.")
+d = print("4. To interrupt the execution of a program.")
+j = float(input("Your answer(1,2,3,4):") )
+if j == 1 :
+    print ("Please, try again.")
+if j == 2 :
+    print ("Completed, have a nice day!")
+    print ("Congretulations, have a nice day!")
+    'break'
+if j == 3 :
+    print ("Please, try again.")
+if j == 4 :
+    print ("Please, try again.")
 
 
 
