@@ -1,25 +1,12 @@
+money = 0
+water = 0
+milk  = 0
+beans = 0
+cups  = 0
 
 
-def main():
-    while True:
-        action = select_action()
-
-        if action == 'buy':
-            buy()
-        elif action == 'fill':
-            fill()
-        elif action == 'take':
-            take()
-        elif action == 'exit':
-            break
-        elif action == 'remaining':
-            print_state()
-        else:
-            raise ValueError(f'Unknown command {action}')
-
-
-if __name__ == '__main__':
-    main()
+class ResourceError(Exception):
+    pass
 
 
 
