@@ -1,12 +1,16 @@
 
-    else:
-        print('Starting to make a coffee\n')
-        print('Grinding coffee beans\n')
-        print('Boiling water!\n')
-        print('Mixing boiled water with crushed coffee beans\n')
-        print('Pouring coffee into the cup\n')
-        print('Pouring some milk into the cup\n')
-        print('Coffee is ready!\n')
+
+q = input("Write how many cups of coffee you will need: ")
+
+water = int(q) * 200
+milk = int(q) + 50
+beans = int(q) * 15
+
+print("For " + str(q) + " cups of coffee you will need:")
+print(str(water) + " ml of water")
+print(str(milk) + " ml of milk")
+print(str(beans) + " g of coffee beans")
+
 
 
 
