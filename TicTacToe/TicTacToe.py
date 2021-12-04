@@ -17,3 +17,26 @@ def draw_field3(string):
     o_count = string.count('O')
     if abs(x_count - o_count) >= 2:
         print('Impossible')
+    else:
+        x_winner, o_winner = False, False
+        for wic in WIN_INDEX_COMBINATIONS:
+            if all(string[i] == 'X' for i in wic):
+                x_winner = True
+            if all(string[i] == 'O' for i in wic):
+                o_winner = True
+        if x_winner and not o_winner:
+            print('X wins')
+            game_mode = False
+        elif not x_winner and o_winner:
+            print('O wins')
+            game_mode = False
+        elif x_winner and o_winner:
+            print('Impossible')
+        else:
+            if string.count('_') > 0:
+                print('Game not finished')
+            else:
+                print('Draw')
+                game_mode = False
+
+
