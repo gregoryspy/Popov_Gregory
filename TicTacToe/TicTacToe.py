@@ -39,4 +39,33 @@ def draw_field3(string):
                 print('Draw')
                 game_mode = False
 
+def game4():
+    string = '_' * 9
+    symbol = 'X'
+    draw_field3(string = string)
+    for _ in range(9):
+        while True:
+            line = input('Enter the coordinates: ')
+            try:
+                row, col = (int(c) for c in line.split())
+            except:
+                print('You should enter numbers!')
+            else:
+                if row not in (1, 2, 3) or col not in (1, 2, 3):
+                    print('Coordinates should be from 1 to 3!')
+                else:
+                    idx = (row - 1) * 3 + col - 1
+                    if string[idx] != '_':
+                        print('This cell is occupied! Choose another one!')
+                    else:
+                        print('Ok.')
+                        break
 
+        string = string[:idx] + symbol + string[idx + 1:]
+        draw_field3(string=string)
+        if not game_mode:
+            break
+        symbol = 'O' if symbol == 'X' else 'X'
+
+if __name__ == '__main__':
+    game4()
