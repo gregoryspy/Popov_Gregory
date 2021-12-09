@@ -1,0 +1,3 @@
+Anton 500
+Ivan 200
+Maria 100
